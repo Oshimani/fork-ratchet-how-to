@@ -1,0 +1,56 @@
+@import "bootstrap/scss/bootstrap";
+
+.grid {
+	display: grid;
+	grid-template-columns: 116px auto;
+
+	.col {
+		margin: 10px;
+		padding-bottom: 96px;
+
+		&.col-left {
+			position: relative;
+		}
+	}
+}
+
+.connector {
+	position: absolute;
+	left: calc(50% - 3px);
+	height: 100%;
+	width: 6px;
+	background: rgb(34, 193, 195);
+	background: linear-gradient(180deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+
+.bubble {
+	border-radius: 999px;
+	// border: 3px solid #000;
+	color: #eee;
+	width: 96px;
+	height: 96px;
+	display: grid;
+	place-items: center;
+	font-size: 48px;
+	background: rgb(34, 193, 195);
+	background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 768px) {
+  .container
+	.grid {
+		grid-template-columns: 84px auto;
+		.bubble {
+			width: 64px;
+			height: 64px;
+			font-size: 32px;
+		}
+
+		.connector {
+			left: calc(50% - 2px);
+			width: 4px;
+		}
+	}
+}
